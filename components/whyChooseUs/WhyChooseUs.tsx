@@ -22,9 +22,9 @@ export default function WhyChooseUs() {
 
         const interval = setInterval(() => {
             setCounts((prev) => {
-                let updated = { ...prev };
+                const updated = { ...prev };
                 Object.keys(targets).forEach((key) => {
-                    let k = key as keyof typeof targets;
+                    const k = key as keyof typeof targets;
                     if (prev[k] < targets[k]) {
                         updated[k] = Math.min(prev[k] + Math.ceil(targets[k] / 100), targets[k]);
                     }
