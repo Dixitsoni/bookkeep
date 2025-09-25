@@ -24,7 +24,7 @@ export default function WhyChooseUs() {
             setCounts((prev) => {
                 let updated = { ...prev };
                 Object.keys(targets).forEach((key) => {
-                    const k = key as keyof typeof targets;
+                    let k = key as keyof typeof targets;
                     if (prev[k] < targets[k]) {
                         updated[k] = Math.min(prev[k] + Math.ceil(targets[k] / 100), targets[k]);
                     }
