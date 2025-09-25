@@ -50,7 +50,7 @@ export default function TopNav() {
 
                 {/* Logo */}
                 <Link href="/" className="flex items-center space-x-2">
-                    <Image src="/images/logo.png" alt="Logo" width={140} height={40} />
+                    <Image src="/images/logo.jpeg" alt="Logo" width={190} height={40} />
                 </Link>
 
                 {/* Navigation */}
@@ -61,7 +61,7 @@ export default function TopNav() {
                         {/* Menu Button */}
                         <button className="flex items-center cursor-pointer space-x-1 hover:text-gray-900">
                             <span>About Us</span>
-                            <FiChevronDown />
+                           <span><FiChevronDown /></span>
                         </button>
 
                         {/* Popup Menu */}
