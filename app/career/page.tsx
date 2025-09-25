@@ -23,15 +23,15 @@ export default function Career() {
             {/* Form starts here */}
             <form className="space-y-3">
               <div>
-                <label className="font-medium text-gray-700">What's Your Name?</label>
+                <label className="font-medium text-gray-700">{"What's Your Name?"}</label>
                 <input type="text" className="mt-1 w-full border rounded px-3 py-2" />
               </div>
               <div>
-                <label className="font-medium text-gray-700">What's Your Email ID?</label>
+                <label className="font-medium text-gray-700">{"What's Your Email ID?"}</label>
                 <input type="email" className="mt-1 w-full border rounded px-3 py-2" />
               </div>
               <div>
-                <label className="font-medium text-gray-700">What's Your Contact Number?</label>
+                <label className="font-medium text-gray-700">{"What's Your Contact Number?"}</label>
                 <input type="text" className="mt-1 w-full border rounded px-3 py-2" />
               </div>
               <div>
@@ -67,7 +67,7 @@ export default function Career() {
                 </div>
               </div>
               <div>
-                <label className="font-medium text-gray-700">What's Your Notice Period? (days)</label>
+                <label className="font-medium text-gray-700">{"What's Your Notice Period? (days)"}</label>
                 <input type="text" className="mt-1 w-full border rounded px-3 py-2" />
               </div>
               <div>
