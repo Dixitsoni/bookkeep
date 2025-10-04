@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../../layout/Layout";
 import { FaFileInvoice, FaCalculator, FaDollarSign, FaChartBar, FaMoneyCheckAlt, FaCog, FaShieldAlt, FaChartLine, FaUserFriends, FaClock, FaTasks, FaTools } from "react-icons/fa";
+import Link from "next/link";
 
 const services = [
     {
@@ -99,9 +100,9 @@ const ServicePage = () => {
                     <nav className="mt-2 text-sm">
                         <ol className="flex justify-center space-x-2">
                             <li>
-                                <a href="/" className="hover:underline">
+                                <Link href="/" className="hover:underline">
                                     Home
-                                </a>
+                                </Link>
                             </li>
                             <li>
                                 <span className="text-teal-400">›</span>
@@ -246,7 +247,12 @@ const ServicePage = () => {
 };
 
 
-const BenefitItem = ({ icon, text }: any) => (
+type BenefitItemProps = {
+    icon: React.ReactNode;
+    text: string;
+};
+
+const BenefitItem = ({ icon, text }: BenefitItemProps) => (
     <div className="flex items-center gap-3">
         <span className="bg-green-50 border border-green-200 rounded-full w-10 h-10 flex items-center justify-center text-lg">{icon}</span>
         <span className="text-gray-700">{text}</span>
