@@ -5,6 +5,7 @@ import AboutSection from "@/components/about/About";
 import StatsSection from "@/components/StatSection";
 import LatestProject from "@/components/ourCase/OurCase";
 import TeamPage from "@/components/teamCard/TeamCard";
+import Link from "next/link";
 
 const AboutPage = () => {
     return (
@@ -25,9 +26,9 @@ const AboutPage = () => {
                     <nav className="mt-2 text-sm">
                         <ol className="flex justify-center space-x-2">
                             <li>
-                                <a href="/" className="hover:underline">
+                                <Link href="/" className="hover:underline">
                                     Home
-                                </a>
+                                </Link>
                             </li>
                             <li>
                                 <span className="text-teal-400">›</span>
