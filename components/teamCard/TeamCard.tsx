@@ -1,7 +1,15 @@
 import React from "react";
 
+interface TeamCardProps {
+    image: string;
+    name: string;
+    role: string;
+    description?: string;
+    dark?: boolean;
+}
+
 // Card Component for Team Members
-const TeamCard = ({ image, name, role, description, dark }: any) => {
+const TeamCard: React.FC<TeamCardProps> = ({ image, name, role, description, dark }) => {
     return (
         <div
             className={`rounded-lg shadow-md p-4 text-center ${dark ? "bg-[#2F3A56] text-white" : "bg-white"
