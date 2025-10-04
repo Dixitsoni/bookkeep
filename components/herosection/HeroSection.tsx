@@ -24,16 +24,18 @@ export default function HeroSection() {
 
             {/* Buttons */}
             <div className="flex items-center gap-4 mt-6">
-              <button className="bg-teal-500 hover:bg-teal-600 text-white font-semibold px-6 py-2 rounded-sm shadow">
+              <a href="/contact">
+              <button className="bg-teal-500 cursor-pointer hover:bg-teal-600 text-white font-semibold px-6 py-2 rounded-sm shadow">
                 Contact Us
               </button>
+              </a>
 
-              <button className="flex items-center gap-2 text-[#123463] font-medium">
+              {/* <button className="flex items-center gap-2 text-[#123463] font-medium">
                 <span className="w-10 h-10 flex items-center justify-center border-2 border-teal-500 text-teal-500 rounded-full">
                   <FaPlay size={14} />
                 </span>
                 Watch Video
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

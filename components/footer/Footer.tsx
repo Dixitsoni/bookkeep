@@ -1,4 +1,5 @@
 // components/FooterNewsletter.js
+import Image from 'next/image';
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaRegClock } from 'react-icons/fa';
 
 export default function FooterNewsletter() {
@@ -26,15 +27,11 @@ export default function FooterNewsletter() {
 
       {/* Footer Section */}
       <footer className="bg-blue-900 text-white pt-16 pb-6">
-        <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-4 gap-8">
+        <div className="px-8 max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
           {/* Bizkeep */}
           <div>
             <div className="flex items-center mb-4">
-              {/* Replace with logo image if available */}
-              <span className="text-teal-500 text-4xl mr-2">
-                <svg width="40" height="40" fill="none" viewBox="0 0 40 40"><path fill="currentColor" d="M8 12h24v16H8V12zm24-2c1.1 0 2 .9 2 2v16c0 1.1-.9 2-2 2H8c-1.1 0-2-.9-2-2V12c0-1.1.9-2 2-2h24z"></path></svg>
-              </span>
-              <span className="text-3xl font-bold">Bizkeep</span>
+              <Image src={"/images/logo.png"} width={190} height={40} alt="logo" />
             </div>
             <p className="text-gray-300 mb-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -49,17 +46,17 @@ export default function FooterNewsletter() {
           {/* Quick Links */}
           <div>
             <h4 className="font-semibold mb-3 border-teal-400 border-b pb-2">Quick Links</h4>
-            <ul className="space-y-2">
-              <li>About Us</li>
-              <li>Services</li>
-              <li>Cases</li>
-              <li>Pricing</li>
-              <li>Contact</li>
+            <ul className="flex justify-center flex-col gap-6 text-gray-300">
+              <li><a href='#topnav'>About Us</a></li>
+              <li><a href='#topnav'>Services</a></li>
+              <li><a href='/case-studies'>Cases</a></li>
+              <li><a href='/pricing'>Pricing</a></li>
+              <li><a href='/contact'>Contact</a></li>
             </ul>
           </div>
 
           {/* Useful Links */}
-          <div>
+          {/* <div>
             <h4 className="font-semibold mb-3 border-teal-400 border-b pb-2">Useful Links</h4>
             <ul className="space-y-2">
               <li>Privacy Policy</li>
@@ -68,10 +65,10 @@ export default function FooterNewsletter() {
               <li>Support</li>
               <li>FAQ</li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Work Hours */}
-          <div>
+          {/* <div>
             <h4 className="font-semibold mb-3 border-teal-400 border-b pb-2">Work Hours</h4>
             <div className="mb-2 flex items-center text-teal-400"><FaRegClock className="mr-2" /> <span className="text-white font-semibold">9 AM - 5 PM , Monday - Saturday</span></div>
             <p className="text-gray-300 mb-4">
@@ -80,7 +77,7 @@ export default function FooterNewsletter() {
             <button className="bg-teal-500 text-white rounded-md py-3 px-6 font-semibold">
               Make Appointment
             </button>
-          </div>
+          </div> */}
         </div>
         <div className="border-t border-blue-800 mt-12 text-center text-gray-400 pt-4 text-sm">
           Bookkeeping Service Company Template Kit by Jegtheme

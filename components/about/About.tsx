@@ -73,9 +73,9 @@ export default function AboutSection() {
 
           {/* Footer with Button & Author */}
           <div className="flex items-center justify-between">
-            <button className="bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 font-medium rounded-sm shadow">
+            {/* <button className="bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 font-medium rounded-sm shadow">
               More About Us
-            </button>
+            </button> */}
             <div>
               <p className="font-medium text-gray-800">Freddy Mcphee</p>
               <p className="text-sm text-gray-500">CEO Bizkeep</p>

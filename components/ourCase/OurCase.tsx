@@ -9,11 +9,11 @@ const images = [
 
 export default function LatestProject() {
     return (
-        <div className="bg-white min-h-screen flex flex-col items-center">
+        <div className="bg-white flex flex-col items-center">
             {/* Header */}
             <div className="pt-12 pb-6 text-center">
                 <div className="text-[#1387A4] text-2xl font-semibold border-b-4 border-[#1387A4] inline-block mb-4">Our Cases</div>
-                <h1 className="text-2xl font-semibold mb-2">
+                <h1 className="text-4xl font-thin mb-2">
                     Let’s See Our Latest Project
                 </h1>
                 <p className="text-gray-500 max-w-xl mx-auto text-base">
@@ -21,12 +21,14 @@ export default function LatestProject() {
                 </p>
             </div>
             {/* Images Row */}
-            <div className="w-full bg-blue-900 flex justify-center px-20 py-10 gap-8">
-                {images.map((img, i) => (
-                    <div key={i} className="bg-white rounded shadow overflow-hidden flex items-center justify-center">
-                        <img src={img} alt={`project ${i + 1}`} className="w-full h-full object-cover" />
-                    </div>
-                ))}
+            <div className="w-full bg-blue-900">
+                <div className="max-w-7xl mx-auto flex justify-center px-20 py-10 gap-8">
+                    {images.map((img, i) => (
+                        <div key={i} className="bg-white  rounded shadow overflow-hidden flex items-center justify-center">
+                            <img src={img} alt={`project ${i + 1}`} className="w-full h-full object-cover" />
+                        </div>
+                    ))}
+                </div>
             </div>
             {/* Testimonials */}
             <div className="w-full bg-blue-900 flex justify-center py-14 gap-12">

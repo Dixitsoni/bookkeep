@@ -11,27 +11,28 @@ type ServiceItem = {
     title: string;
     desc: string;
     icon: JSX.Element;
+    path?: string;
 };
 
 const services: Record<ServiceCategory, ServiceItem[]> = {
     "Business Owners": [
-        { title: "Accounting Outsourcing Services", desc: "CPA’s Go-To Firm For A-Z Accounting Needs", icon: <FiBookOpen /> },
-        { title: "Bookkeeping Services", desc: "Experienced Bookkeepers At Your Service", icon: <FiBookOpen /> },
-        { title: "Outsourced Tax Preparation", desc: "End-To-End Tax Preparation Support", icon: <FiBookOpen /> },
-        { title: "AR & AP Management", desc: "Comprehensive AR & AP Management Services", icon: <FiSettings /> },
-        { title: "Accounting Software Consulting", desc: "Helping Choose The Ideal Accounting Software", icon: <FiSettings /> },
-        { title: "Payroll Management", desc: "Streamline Your CPA’s Payroll Processes", icon: <FiUsers /> },
-        { title: "Virtual CFO", desc: "Flexible Virtual CFO Solutions", icon: <FiBriefcase /> },
-        { title: "Xero & QuickBooks Accounting", desc: "Specialised Xero & QuickBooks Services", icon: <FiSettings /> },
-        { title: "Audit Support Services", desc: "Get Top-Notch Audit Support Service", icon: <FiUsers /> },
-        { title: "Cost & Operation Analysis", desc: "Drive Profitability & Make Data-Backed Decisions", icon: <FiBriefcase /> },
-        { title: "Year End Services", desc: "Smoothly Transition Into The New Fiscal Year", icon: <FiBookOpen /> },
-        { title: "Preparation Of Financial Statements", desc: "Helping Keep Financial Statements Handy", icon: <FiBookOpen /> },
+        { title: "Accounting Outsourcing Services", desc: "CPA’s Go-To Firm For A-Z Accounting Needs", icon: <FiBookOpen />, path: '/services/Outsourcing' },
+        { title: "Bookkeeping Services", desc: "Experienced Bookkeepers At Your Service", icon: <FiBookOpen />, path: '/services/bookkeeping' },
+        { title: "Outsourced Tax Preparation", desc: "End-To-End Tax Preparation Support", icon: <FiBookOpen />, path: '/services/tax' },
+        { title: "AR & AP Management", desc: "Comprehensive AR & AP Management Services", icon: <FiSettings />, path: '/services/ap_management' },
+        { title: "Accounting Software Consulting", desc: "Helping Choose The Ideal Accounting Software", icon: <FiSettings />, path: '/services/software_consultant' },
+        { title: "Payroll Management", desc: "Streamline Your CPA’s Payroll Processes", icon: <FiUsers />, path: '/services/payroll' },
+        { title: "Virtual CFO", desc: "Flexible Virtual CFO Solutions", icon: <FiBriefcase />, path: '/services/virtual_cfo' },
+        { title: "Xero & QuickBooks Accounting", desc: "Specialised Xero & QuickBooks Services", icon: <FiSettings />, path: '/services/xero_accounting' },
+        { title: "Audit Support Services", desc: "Get Top-Notch Audit Support Service", icon: <FiUsers />, path: '/services/audit' },
+        { title: "Cost & Operation Analysis", desc: "Drive Profitability & Make Data-Backed Decisions", icon: <FiBriefcase />, path: '/services/cost_analysis' },
+        { title: "Year End Services", desc: "Smoothly Transition Into The New Fiscal Year", icon: <FiBookOpen />, path: '/services/year_end_services' },
+        { title: "Preparation Of Financial Statements", desc: "Helping Keep Financial Statements Handy", icon: <FiBookOpen />, path: '/services/financial_statement' },
     ],
     "Valuation Services": [
-        { title: "Business Valuation", desc: "Accurate & Professional Valuation Services", icon: <FiBriefcase /> },
-        { title: "Financial Advisory", desc: "Expert Guidance For Business Growth", icon: <FiUsers /> },
-        { title: "Fractional CFO Service", desc: "On-Demand CFO Expertise", icon: <FiBriefcase /> },
+        { title: "Business Valuation", desc: "Accurate & Professional Valuation Services", icon: <FiBriefcase />, path: '/services/business_valuation' },
+        { title: "Financial Advisory", desc: "Expert Guidance For Business Growth", icon: <FiUsers />, path: '/services/financial' },
+        { title: "Fractional CFO Service", desc: "On-Demand CFO Expertise", icon: <FiBriefcase />, path: '/services/fractional' },
     ],
     "Advisory Services": []
 };
@@ -59,9 +60,9 @@ export default function TopNav() {
                     {/* About Us dropdown */}
                     <div className="relative group">
                         {/* Menu Button */}
-                        <button className="flex items-center cursor-pointer space-x-1 hover:text-gray-900">
+                        <button id="topnav" className="flex items-center cursor-pointer space-x-1 hover:text-gray-900">
                             <span>About Us</span>
-                           <span><FiChevronDown /></span>
+                            <span><FiChevronDown /></span>
                         </button>
 
                         {/* Popup Menu */}
@@ -69,7 +70,7 @@ export default function TopNav() {
                             <div className="flex flex-col space-y-4">
                                 {/* Item 1 */}
                                 <Link
-                                    href="/about/company"
+                                    href="/aboutus/company"
                                     className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition"
                                 >
                                     <div className="w-10 h-10 flex items-center justify-center rounded-full bg-green-50 text-green-600 text-xl">
@@ -80,7 +81,7 @@ export default function TopNav() {
 
                                 {/* Item 2 */}
                                 <Link
-                                    href="/how/work"
+                                    href="/aboutus/work"
                                     className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition"
                                 >
                                     <div className="w-10 h-10 flex items-center justify-center rounded-full bg-green-50 text-green-600 text-xl">
@@ -91,7 +92,7 @@ export default function TopNav() {
 
                                 {/* Item 3 */}
                                 <Link
-                                    href="/meet/team"
+                                    href="/aboutus/team"
                                     className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition"
                                 >
                                     <div className="w-10 h-10 flex items-center justify-center rounded-full bg-green-50 text-green-600 text-xl">
@@ -102,7 +103,7 @@ export default function TopNav() {
 
                                 {/* Item 4 */}
                                 <Link
-                                    href="/engagement/model"
+                                    href="/aboutus/model"
                                     className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition"
                                 >
                                     <div className="w-10 h-10 flex items-center justify-center rounded-full bg-green-50 text-green-600 text-xl">
@@ -117,6 +118,7 @@ export default function TopNav() {
                     {/* Services mega dropdown */}
                     <div className="relative group">
                         <button
+                            id="topnav"
                             onClick={() => toggleMenu("services")}
                             className="flex cursor-pointer items-center space-x-1 hover:text-gray-900"
                         >
@@ -124,7 +126,7 @@ export default function TopNav() {
                             <FiChevronDown />
                         </button>
 
-                        <div className="absolute top-full left-0 hidden group-hover:flex bg-white shadow-xl rounded-xl p-4 w-[900px] z-50">
+                        <div className="absolute top-full -left-20 hidden group-hover:flex bg-white shadow-xl rounded-xl p-4 w-[900px] z-50">
 
                             {/* Left Side Category */}
                             <div className="w-1/4 bg-gray-50 border-r">
@@ -145,7 +147,7 @@ export default function TopNav() {
                                 {services[activeCategory].map((item, i) => (
                                     <Link
                                         key={i}
-                                        href="#"
+                                        href={item.path || '#'}
                                         className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition"
                                     >
                                         <div className="text-green-600 text-xl">{item.icon}</div>

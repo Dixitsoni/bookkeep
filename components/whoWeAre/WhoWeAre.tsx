@@ -5,7 +5,7 @@ export default function BookkeepingSection() {
         <section className="flex relative my-10">
             {/* Left Side - Content */}
             <div className="w-1/2 my-10">
-                <div className="bg-[#0d1e3a] h-full px-16 py-24 flex flex-col justify-center text-white">
+                <div className="bg-[#0d1e3a] rounded-2xl h-full px-16 py-24 flex flex-col justify-center text-white">
                     <div className="mb-3">
                         <span className="text-sm font-semibold border-b-2 border-[#22cfcf] pb-1 inline-block">
                             Who We Are
@@ -111,7 +111,7 @@ export default function BookkeepingSection() {
                 <img
                     src="/images/people_conference.jpg"
                     alt="Team business meeting"
-                    className="object-cover w-full rounded-t-r rounded-b-r h-full"
+                    className="object-cover w-full rounded-2xl h-full"
                     style={{ maxHeight: 'calc(100vh - 48px)' }}
                 />
             </div>

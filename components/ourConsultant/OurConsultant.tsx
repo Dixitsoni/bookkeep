@@ -12,7 +12,9 @@ export default function OurConsultant() {
                     <p className='text-white z-2 relative text-center max-w-2xl mx-auto'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
                 <div className='mt-4'>
-                    <button className='bg-teal-500 z-2 relative hover:bg-teal-600 text-white font-semibold px-6 py-2 rounded-sm shadow'>Contact Us</button>
+                    <a href='/contact'>
+                        <button className='bg-teal-500 z-2 cursor-pointer relative hover:bg-teal-600 text-white font-semibold px-6 py-2 rounded-sm shadow'>Contact Us</button>
+                    </a>
                 </div>
             </div>
 

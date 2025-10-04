@@ -19,7 +19,7 @@ export default function ProcessSection() {
                         01.
                     </span>
                 </div>
-                <div className="absolute top-1/2 left-[15%] right-[15%] border-t-2 border-dashed border-gray-300 z-0"></div>
+                {/* <div className="absolute top-1/2 left-[15%] right-[15%] border-t-2 border-dashed border-gray-300 z-0"></div> */}
                 <div className="flex-1 flex justify-center">
                     <span className="bg-teal-500 text-white font-bold text-xl w-20 h-20 rounded-full flex items-center justify-center shadow-md">
                         02.
